@@ -146,6 +146,7 @@ export default {
   align-self: flex-start;
   padding: 8px;
 }
+
 .number p {
   font-size: 1.6em;
   margin-bottom: 8px;
@@ -160,7 +161,7 @@ p {
 
 .card p {
   font-family: "Courier New", Courier, monospace;
-  text-shadow:1px 1px 1px rgba(0, 0, 0, 0.288),  -1px -1px 1px rgba(255, 255, 255, 0.459);
+  /* text-shadow:-1px -1px 1px rgba(255, 255, 255, 0.219); */
   color: #323232;
 }
 
