@@ -3,7 +3,6 @@
     class="input-form"
     v-on:input="renderToCard"
     >
-
     <input
       type="text"
       maxlength="16"
@@ -21,6 +20,7 @@
       <select
         v-model="cardInput.validMonth"
       >
+      <option value="" disabled selected>Month</option>
         <option
           v-for="monthOption in formSelections.monthsArray"
           :key="monthOption"
@@ -33,6 +33,7 @@
       <select
         v-model="cardInput.validYear"
       >
+      <option value="" disabled selected>Year</option>
         <option
           v-for="yearOption in formSelections.yearsArray"
           :key="yearOption"
@@ -46,6 +47,7 @@
       <select
         v-model="cardInput.vendor"
       >
+      <option value="" disabled selected>Vendor</option>
         <option
           v-for="vendorOption in formSelections.vendorsArray"
           :key="vendorOption"

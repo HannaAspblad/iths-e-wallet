@@ -50,14 +50,16 @@
       <div class="bottom">
         <span class="name">
           <p>CARDHOLDER NAME</p>
-          <p>
+          <p class="large-text">
             {{ cardData.holder }}
           </p>
         </span>
 
         <span class="valid">
           <p>VALID THRU</p>
-          <p>{{ cardData.validMonth }} / {{ cardData.validYear }}</p>
+          <p class="large-text">
+            {{ cardData.validMonth }} / {{ cardData.validYear }}
+          </p>
         </span>
       </div>
     </div>
@@ -126,7 +128,6 @@ export default {
 
 <style scoped>
 
-
 .card {
   display: flex;
   flex-direction: column;
@@ -146,7 +147,8 @@ export default {
   padding: 8px;
 }
 .number p {
-  font-size: 1.3em;
+  font-size: 1.6em;
+  margin-bottom: 8px;
 }
 
 p {
@@ -186,6 +188,10 @@ p {
   font-size: 0.9rem;
 }
 
+.bottom .large-text{
+
+  font-size:1.2rem;
+}
 
 .ninja-bank {
   background-color: #313131;
