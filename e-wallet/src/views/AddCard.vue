@@ -1,17 +1,10 @@
 <template>
   <div class="page-container">
-
     <Top />
 
-    <Card
-      :cardData="cardData"
-      :message="message"
-    />
+    <Card :cardData="cardData" :message="message" />
 
-    <CardForm
-      @render="render"
-    />
-
+    <CardForm @render="render" />
   </div>
 </template>
 
@@ -35,7 +28,7 @@ export default {
         validYear: 0,
         vendor: "",
       },
-      
+
       message: "New card",
     }
   },
@@ -45,7 +38,6 @@ export default {
       this.cardData = card
     },
   },
-
 }
 </script>
 

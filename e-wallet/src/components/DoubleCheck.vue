@@ -1,31 +1,20 @@
 <template>
   <div class="consent">
     <h3>Are you sure you want to remove this card?</h3>
-    <span
-        class="options">
-
-      <div
-        class="button"
-        @click="consent(true)"
-        >
-        
+    <span class="options">
+      <button class="button" @click="consent(true)">
         <p>Yep</p>
-        </div>
+      </button>
 
-      <div
-        class="button"
-        @click="consent(false)"
-        >
-      
-      <p>Nope</p>
-      </div>
+      <button class="button" @click="consent(false)">
+        <p>Nope</p>
+      </button>
     </span>
   </div>
 </template>
 
 <script>
 export default {
-
   methods: {
     consent(value) {
       this.decided = true

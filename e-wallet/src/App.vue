@@ -8,6 +8,7 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .button {
   height: 38px;
   border-radius: 8px;

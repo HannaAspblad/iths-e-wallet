@@ -1,42 +1,18 @@
 <template>
   <div>
-    <DoubleCheck
-      v-if="check"
-      @consent="removeCard(cardData.id)"
-      @dissent="hidePopUp"
-    />
-
+    <DoubleCheck v-if="check" @consent="removeCard(cardData.id)" @dissent="hidePopUp" />
 
     <h4>{{ message }}</h4>
 
+    <p class="delete-button" @click="checkConsent">
+      {{ deleteButton }}
+    </p>
 
-    
-      <p
-        class="delete-button"
-        @click="checkConsent"
-      >
-        
-        {{ deleteButton }}
-        
-      </p>
-
-    
-
-    
-    <div
-      class="card"
-      :class="this.cardData.vendor.replace(' ', '-').toLowerCase()"
-    >
-
+    <div class="card" :class="this.cardData.vendor.replace(' ', '-').toLowerCase()">
       <div class="top">
         <img src="@/assets/chip-light.svg" alt="chip image" />
 
-        <img
-          class="logo"
-          alt="vendor logo"
-          :src="vendorLogo"
-        />
-
+        <img class="logo" alt="vendor logo" :src="vendorLogo" />
       </div>
 
       <div class="middle">
@@ -57,13 +33,10 @@
 
         <span class="valid">
           <p>VALID THRU</p>
-          <p class="large-text">
-            {{ cardData.validMonth }} / {{ cardData.validYear }}
-          </p>
+          <p class="large-text">{{ cardData.validMonth }} / {{ cardData.validYear }}</p>
         </span>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -77,7 +50,6 @@ export default {
     cardData: Object,
     message: String,
     deleteButton: String,
-    
   },
 
   data() {
@@ -97,16 +69,12 @@ export default {
     hidePopUp() {
       this.check = false
     },
-
   },
 
   computed: {
     vendorLogo: function () {
-
-    
       if (this.cardData.vendor == "Evil Corp") {
         return require("@/assets/vendor-evil.svg")
-        
       }
       if (this.cardData.vendor == "Ninja Bank") {
         return require("@/assets/vendor-ninja.svg")
@@ -119,15 +87,12 @@ export default {
       } else {
         return require("@/assets/vendor-blockchain.svg")
       }
-
-      
     },
   },
 }
 </script>
 
 <style scoped>
-
 .card {
   display: flex;
   flex-direction: column;
@@ -140,7 +105,6 @@ export default {
   box-sizing: border-box;
   background-color: grey;
 }
-
 
 .logo {
   align-self: flex-start;
@@ -156,8 +120,6 @@ p {
   margin: 0;
   text-transform: uppercase;
 }
-
-
 
 .card p {
   font-family: "Courier New", Courier, monospace;
@@ -185,13 +147,12 @@ p {
   padding: 8px;
 }
 
-.bottom p{
+.bottom p {
   font-size: 0.9rem;
 }
 
-.bottom .large-text{
-
-  font-size:1.2rem;
+.bottom .large-text {
+  font-size: 1.2rem;
 }
 
 .ninja-bank {
@@ -218,5 +179,4 @@ p {
   display: inline-block;
   font-weight: bold;
 }
-
 </style>

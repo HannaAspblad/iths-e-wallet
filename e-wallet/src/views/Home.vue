@@ -2,15 +2,12 @@
   <div class="page-container">
     <Top />
 
-    <Card
-      :cardData="activeCard"
-      :message="message"
-    />
+    <Card :cardData="activeCard" :message="message" />
 
     <CardStack />
 
     <router-link to="/addcard">
-      <div class="button"><p>Add new card</p></div>
+      <button class="button"><p>Add new card</p></button>
     </router-link>
   </div>
 </template>
@@ -33,7 +30,6 @@ export default {
       },
 
       message: "Active card",
-      
     }
   },
 
