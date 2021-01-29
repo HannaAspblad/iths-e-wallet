@@ -1,9 +1,6 @@
 <template>
   <form class="input-form" v-on:input="renderToCard">
-    
     <input
-
-    
       type="text"
       maxlength="16"
       placeholder="XXXX XXXX XXXX XXXX"
@@ -97,6 +94,10 @@ select {
   margin: 16px;
   font-family: "Courier New", Courier, monospace;
   text-transform: uppercase;
+  border-radius: 8px;
+  padding: 8px 0 8px 8px;
+  outline: none;
+  border: 1.5px solid black;
 }
 
 select {

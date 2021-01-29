@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Card
+  <div class="grid-container">
+    <Card class="stacked-card"
       v-for="card in allCards"
       :key="card.id"
       :cardData="card"
@@ -33,3 +33,18 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  
+}
+
+.stacked-card{
+  grid-row: auto;
+}
+  
+</style>

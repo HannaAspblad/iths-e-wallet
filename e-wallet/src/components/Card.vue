@@ -85,7 +85,7 @@ export default {
       if (this.cardData.vendor == "Bitcoin Inc") {
         return require("@/assets/vendor-bitcoin.svg")
       } else {
-        return require("@/assets/vendor-blockchain.svg")
+        return require("@/assets/vendor-bitcoin.svg")
       }
     },
   },
@@ -104,6 +104,7 @@ export default {
   margin: 0 0 16px 0;
   box-sizing: border-box;
   background-color: grey;
+  box-shadow: inset 0px 1px 3px #ffffff50, 2px 4px 8px #00000050;
 }
 
 .logo {
@@ -123,7 +124,6 @@ p {
 
 .card p {
   font-family: "Courier New", Courier, monospace;
-  /* text-shadow:-1px -1px 1px rgba(255, 255, 255, 0.219); */
   color: #323232;
 }
 
@@ -164,6 +164,10 @@ p {
 }
 .evil-corp {
   background-color: #e02e4e;
+}
+
+.evil-corp p {
+  color: white;
 }
 
 .bitcoin-inc {

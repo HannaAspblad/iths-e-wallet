@@ -4,7 +4,7 @@
 
     <Card :cardData="activeCard" :message="message" />
 
-    <CardStack />
+    <CardStack class="stack" />
 
     <router-link to="/addcard">
       <button class="button"><p>Add new card</p></button>
@@ -52,5 +52,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.stack{
+  margin-bottom: 210px;
 }
 </style>
